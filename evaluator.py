@@ -21,6 +21,7 @@ def validate(model, loader, criterion, log_freq=50):
     end = time.time()
     with torch.no_grad():
         for i, (input, target) in enumerate(loader):
+            print(i)
             target = target.cuda()
             input = input.cuda()
 
